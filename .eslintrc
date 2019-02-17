@@ -1,0 +1,46 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb-base",
+    "plugin:flowtype/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "codeFrame": false
+  },
+  "plugins": [
+    "import",
+    "jest"
+  ],
+  "env": {
+    "node": true,
+    "jest/globals": true
+  },
+  "globals": {
+    "expect": true
+  },
+  "rules": {
+    "prefer-destructuring": ["error", {"object": true, "array": false}],
+    "no-console": [
+      "error"
+    ],
+    "max-len": [
+      "error",
+      100
+    ],
+    "indent": [
+      "error",
+      2
+    ],
+    "class-methods-use-this": [
+      "warn"
+    ],
+    "prefer-default-export": "off",
+    "import/prefer-default-export": "off",
+    "one-var": "off",
+    "no-underscore-dangle": ["error", {"allowAfterThis": true} ],
+    "comma-dangle": ["error", "never"]
+
+  }
+}

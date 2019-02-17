@@ -1,0 +1,41 @@
+{
+  "name": "url_s",
+  "version": "1.0.0",
+  "description": "task for shortening url-es requested by user",
+  "main": "src/app.js",
+  "scripts": {
+    "install:client": "cd client && npm install",
+    "start": "concurrently \"npm run app\" \"npm run client\"",
+    "app-dev": "nodemon --exec babel-node src/app.js",
+    "app": "babel-node src/app.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run app-dev\" \"npm run client\"",
+    "install:full": "npm run install:client && npm install",
+    "lint": "eslint src/**",
+    "test": "jest ./test/**"
+  },
+  "author": "Samvel Tadevosyan",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-eslint": "9.0.0",
+    "babel-jest": "23.6.0",
+    "concurrently": "^3.5.1",
+    "eslint": "5.12.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-flowtype": "^2.50.3",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.3.0",
+    "jest": "^23.6.0",
+    "nodemon": "^1.14.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.2",
+    "randomstring": "^1.1.5",
+    "valid-url": "^1.0.9"
+  }
+}
